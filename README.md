@@ -26,15 +26,11 @@ Note:- Project is on master branch ,please select master branch after cloning.
 
 # To Install backend dependencies:
 
-cd backend
-
 npm install
 
 
 # Usage
 # To Start the backend server:
-
-cd backend
 
 npx nodemon server.js 
 
