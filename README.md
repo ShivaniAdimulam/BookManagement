@@ -38,6 +38,7 @@ Open your Postman Web/Desktop application and Hit all the below apis using menti
 
 # To Set the Postman variables
 Set variables in postman collection as follow:
+
 1)URL
   Variable Name = url  
   
@@ -49,14 +50,92 @@ Set variables in postman collection as follow:
 
  2)Auth Token
    Variable Name= token
+   
    Pass token as a value for this variable,You will get this token after running login api (login api endPoint is "/admin/login")
 
 # All API's Info
 
-#1)Login Api
+# 1)Login Api
+  
+   - To login the user use this api
+   
+   - End Point is /admin/login
+   
+   - Use HTTP Post method
+   
+   - In request body pass data --> { "email":"admin@gmail.com", "password":"admin123"}
+   
+Enter the login credetntials to get loggedin : email: admin@gmail.com  and password: admin123
 
+# 2) Add Book Api
+   
+   -Use this Api to add new book.
 
-Enter the login credetntials to get loggedin : Email: adimulamshivani@gmail.com  and Password: shivani@100
+   -End Point is /book/addBook
+   
+   - Use HTTP Post method
+   
+   - In request body pass data --> { "title":"Data structure and algo", "author":"ABC", "summary":"This book is related to data struture and algorithm" }
+
+   - Please pass Authorization token with the api request ,Token type is Bearer token,While passing token in postman please select Bearer token as authorizaton token type.(Pass the token which we will get in above login api response)
+
+# 3) Get Books List
+
+   -Purpose of this api is To get all non deleted books list.
+  
+   -End Point is /book/getBooksList
+   
+   - Use HTTP Get method
+  
+   - Please pass Authorization token with the api request ,Token type is Bearer token,While passing token in postman please select Bearer token as authorizaton token type.(Pass the token which we will get in above login api response)
+
+# 4) Get Book Details by id
+
+   - We can use this api to get the details of book by passing its _id.
+   
+   - End Point is /book/getBookDetailsById
+   
+   - Please pass bookId as a query params.
+
+   - Use HTTP Get Method.
+
+   - For example --> {{url}}/book/getBookDetailsById?bookId=653fb38e89d90af2a0a2fa37
+
+   - Please pass Authorization token with the api request ,Token type is Bearer token,While passing token in postman please select Bearer token as authorizaton token type.(Pass the token which we will get in above login api response)
+
+# 5) Update Book Details
+
+  - To update book details we can use this api.
+
+  - End point is /book/updateBook
+
+  - Use HTTP Put Method.
+
+  - In request body pass data --> { "bookId":"653fb38e89d90af2a0a2fa37","title":"Data structure and algo", "author":"ABC", "summary":"This book is related to data struture and algorithm" }
+
+  - Please pass Authorization token with the api request ,Token type is Bearer token,While passing token in postman please select Bearer token as authorizaton token type.(Pass the token which we will get in above login api response)
+
+# 6) Delete Book
+
+   - We can use this api To delete the book.
+
+   - End Point is /book/deleteBook
+
+   - Use HTTP Put Method (I used Put method here as i am performing soft deletion, I am changing book document's isdeleted key's value to true)
+
+   - In request body pass bookId ---> { "bookId":"653fb38e89d90af2a0a2fa37"}
+
+   - Please pass Authorization token with the api request ,Token type is Bearer token,While passing token in postman please select Bearer token as authorizaton token type.(Pass the token which we will get in above login api response)
+
+# 7) Logout Api
+
+  - To logout the user/admin we can use this api.
+
+  - End point for this api is /book/deleteBook
+
+  - Use HTTP Put Method.
+
+  - Please pass Authorization token with the api request ,Token type is Bearer token,While passing token in postman please select Bearer token as authorizaton token type.(Pass the token which we will get in above login api response)
 
 # Configuration
 You can configure various settings in the project by modifying the corresponding .env file.
