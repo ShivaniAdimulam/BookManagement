@@ -40,6 +40,7 @@ Open your Postman Web/Desktop application and Hit all the below apis using menti
 Set variables in postman collection as follow:
 
 1)URL
+  
   Variable Name = url  
   
   Value = https://bookmanagement-production.up.railway.app       (This is Live server base url)
@@ -49,6 +50,7 @@ Set variables in postman collection as follow:
   Value = http://localhost:4000       (This is local server url ,if in case You run this project on local desk then You can use this url for running the APIs)
 
  2)Auth Token
+   
    Variable Name= token
    
    Pass token as a value for this variable,You will get this token after running login api (login api endPoint is "/admin/login")
