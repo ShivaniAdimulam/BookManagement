@@ -1,7 +1,7 @@
 # BookManagement
 
 # Introduction
-This is a simple Book management system(Backend APIs)built using Node.js. It allows admin to login and to perform CRUD (Create, Read, Update, Delete) operations for books.Logout functionality for admin is also there in the project.All apis are secured with auth middleware.
+This is an elegant, backend Book Management System developed using Node.js. It provides an intuitive interface for administrators/users, allowing them to seamlessly perform CRUD operations (Create, Read, Update, Delete) for books. The system also incorporates a secure authentication mechanism, safeguarding all APIs with an authentication middleware. In addition, it includes a user-friendly logout feature for administrators/users.
 
 # Features
 Create, Read, Update, and Delete Books.
@@ -65,7 +65,7 @@ Set variables in postman collection as follow:
    
    - In request body pass data --> { "email":"admin@gmail.com", "password":"admin123"}
    
-Enter the login credetntials to get loggedin : email: admin@gmail.com  and password: admin123
+ Note: Enter the login credetntials to get loggedin : email: admin@gmail.com  and password: admin123  Or You can create your new admin using admin/addAdmin api
 
 # 2) Add Book Api
    
